@@ -235,7 +235,7 @@ ul  { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('pics/villaP.jpg') center/cover no-repeat;
+  background: url('assets/villaP.jpg') center/cover no-repeat;
   text-align: center;
   overflow: hidden;
 }
