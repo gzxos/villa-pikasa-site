@@ -1,21 +1,96 @@
 /* ═══════════════════════════════════════════════════
    Villa Syariah Pikasa — gallery.css
-   Shared styles for villaputih.html & villalimasan.html
-   Inherits design tokens from styles.css
    ═══════════════════════════════════════════════════ */
 
-/* ── 1. GALLERY NAVBAR ─────────────────────────────── */
+/* ── 1. GALLERY HERO ───────────────────────────────── */
+.gallery-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-align: center;
+}
+
+.background-villa-putih  { background-image: url('assets/villa-putih.JPG'); }
+.background-villa-limasan { background-image: url('assets/vl3.jpg'); }
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(10,30,10,.72) 0%, rgba(10,30,10,.38) 100%);
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 1;
+  color: var(--clr-white);
+  padding-inline: var(--space-lg);
+  animation: heroFadeIn .9s ease both;
+}
+
+.gallery-hero-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.72);
+  margin-bottom: var(--space-md);
+}
+
+.gallery-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+}
+
+.gallery-hero-badge {
+  display: inline-block;
+  background: rgba(90,158,86,.85);
+  color: var(--clr-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: var(--space-lg);
+  backdrop-filter: blur(6px);
+}
+
+.gallery-hero-scroll {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,.6);
+  font-size: 1.1rem;
+  animation: bounce 2s infinite;
+  z-index: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ── 2. GALLERY NAVBAR ─────────────────────────────── */
 .navbar-gallery {
   position: fixed;
-  inset-block-start: 0;
-  inset-inline: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: var(--navbar-h);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: var(--space-xl);
   z-index: 1000;
-  background: transparent;
   transition: background var(--transition), box-shadow var(--transition);
 }
 
@@ -24,10 +99,7 @@
   box-shadow: var(--shadow-sm);
 }
 
-.navbar-gallery .nav-logo img {
-  width: 80px;
-  height: auto;
-}
+.navbar-gallery .nav-logo img { width: 80px; height: auto; }
 
 .navbar-gallery .back-link {
   display: flex;
@@ -46,99 +118,10 @@
   transition: transform var(--transition);
 }
 
-.navbar-gallery .back-link:hover i {
-  transform: translateX(-3px);
-}
+.navbar-gallery .back-link:hover i { transform: translateX(-3px); }
 
-.navbar-gallery.scrolled .back-link {
-  color: var(--clr-text);
-}
-
-.navbar-gallery.scrolled .back-link:hover {
-  color: var(--clr-green);
-}
-
-/* ── 2. GALLERY HERO ───────────────────────────────── */
-.gallery-hero {
-  position: relative;
-  height: 100vh;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  text-align: center;
-}
-
-.background-villa-putih {
-  background-image: url('assets/villa-putih.JPG');
-}
-
-.background-villa-limasan {
-  background-image: url('assets/vl3.jpg');
-}
-
-.gallery-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(160deg, rgba(10, 30, 10, .72) 0%, rgba(10, 30, 10, .38) 100%);
-}
-
-.gallery-hero-content {
-  position: relative;
-  z-index: 1;
-  color: var(--clr-white);
-  padding-inline: var(--space-lg);
-  animation: heroFadeIn .9s ease both;
-}
-
-.gallery-hero-eyebrow {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, .72);
-  margin-bottom: var(--space-md);
-}
-
-.gallery-hero-badge {
-  display: inline-block;
-  background: rgba(90, 158, 86, .85);
-  color: var(--clr-white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 6px 18px;
-  border-radius: 100px;
-  margin-bottom: var(--space-lg);
-  backdrop-filter: blur(6px);
-}
-
-.gallery-hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 4.4rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-}
-
-.gallery-hero-scroll {
-  position: absolute;
-  bottom: var(--space-lg);
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(255, 255, 255, .6);
-  font-size: 1.1rem;
-  animation: bounce 2s infinite;
-  z-index: 1;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+.navbar-gallery.scrolled .back-link { color: var(--clr-text); }
+.navbar-gallery.scrolled .back-link:hover { color: var(--clr-green); }
 
 /* ── 3. PHOTO GRID ─────────────────────────────────── */
 .photo-section {
@@ -176,34 +159,27 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 30, 10, 0);
-  border-radius: var(--radius-md);
+  background: rgba(10,30,10,0);
   transition: background var(--transition);
+  border-radius: var(--radius-md);
 }
 
-.photo-grid-item:hover::after {
-  background: rgba(10, 30, 10, .18);
-}
-
-.photo-grid-item:hover img {
-  transform: scale(1.04);
-}
+.photo-grid-item:hover::after { background: rgba(10,30,10,.18); }
+.photo-grid-item:hover img { transform: scale(1.04); }
 
 /* ── 4. LIGHTBOX ───────────────────────────────────── */
 .lightbox-overlay {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .92);
+  background: rgba(0,0,0,.92);
   z-index: 2000;
   align-items: center;
   justify-content: center;
   padding: var(--space-lg);
 }
 
-.lightbox-overlay.active {
-  display: flex;
-}
+.lightbox-overlay.active { display: flex; }
 
 .lightbox-inner {
   position: relative;
@@ -226,46 +202,39 @@
   right: 0;
   background: none;
   border: none;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255,255,255,.8);
   font-size: 1.5rem;
   cursor: pointer;
-  line-height: 1;
   transition: color var(--transition);
+  line-height: 1;
 }
-
-.lightbox-close:hover {
-  color: var(--clr-white);
-}
+.lightbox-close:hover { color: var(--clr-white); }
 
 .lightbox-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, .12);
-  border: 1px solid rgba(255, 255, 255, .2);
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
   color: var(--clr-white);
-  width: 44px;
-  height: 44px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 1rem;
-  backdrop-filter: blur(4px);
   transition: background var(--transition);
+  backdrop-filter: blur(4px);
 }
 
-.lightbox-nav:hover {
-  background: rgba(255, 255, 255, .25);
-}
-
+.lightbox-nav:hover { background: rgba(255,255,255,.25); }
 .lightbox-prev { left: -60px; }
 .lightbox-next { right: -60px; }
 
 .lightbox-counter {
   text-align: center;
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255,255,255,.6);
   font-size: 0.8rem;
   margin-top: var(--space-md);
   letter-spacing: 0.1em;
@@ -298,6 +267,15 @@
   margin-bottom: var(--space-md);
 }
 
+.villa-desc-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--clr-text);
+  margin-bottom: var(--space-lg);
+}
+
 .villa-desc-floor {
   display: inline-block;
   font-size: 0.72rem;
@@ -309,15 +287,6 @@
   border-radius: 100px;
   padding: 4px 14px;
   margin-bottom: var(--space-md);
-}
-
-.villa-desc-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--clr-text);
-  margin-bottom: var(--space-lg);
 }
 
 .villa-desc-text {
@@ -368,8 +337,7 @@
 }
 
 .facility-item img {
-  width: 28px;
-  height: 28px;
+  width: 28px; height: 28px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -396,7 +364,7 @@
 }
 
 .cta-strip p {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255,255,255,.8);
   font-size: 1rem;
   margin-bottom: var(--space-lg);
 }
@@ -415,112 +383,23 @@
 
 /* ── 8. RESPONSIVE ─────────────────────────────────── */
 @media (max-width: 900px) {
-  .navbar-gallery {
-    padding-inline: var(--space-lg);
-  }
+  .navbar-gallery { padding-inline: var(--space-lg); }
+  .photo-grid { columns: 2; }
+  .villa-desc-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
+}
 
-  .photo-grid {
-    columns: 2;
-  }
-
-  .villa-desc-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
+@media (max-width: 768px) {
+  .photo-section { padding-block: var(--space-xl) var(--space-lg); }
+  .facilities-grid { grid-template-columns: 1fr; }
+  .facilities-wrap { padding: var(--space-lg); }
+  .cta-strip { padding-block: var(--space-lg); }
 }
 
 @media (max-width: 600px) {
-  .photo-grid {
-    columns: 1;
-  }
-
-  .photo-section {
-    padding-block: var(--space-xl) var(--space-lg);
-  }
-
-  .facilities-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .facilities-wrap {
-    padding: var(--space-lg);
-  }
-
-  .lightbox-nav {
-    display: none;
-  }
-
-  .lightbox-inner img {
-    max-height: 70vh;
-  }
-
-  .cta-strip {
-    padding-block: var(--space-lg);
-    padding-inline: var(--space-md);
-  }
-
-  .cta-strip h2 {
-    font-size: clamp(1.4rem, 6vw, 1.8rem);
-  }
-}
-
-@media (max-width: 400px) {
-  .navbar-gallery {
-    padding-inline: 12px;
-  }
-
-  .navbar-gallery .nav-logo img {
-    width: 64px;
-  }
-
-  .gallery-hero-title {
-    font-size: clamp(1.8rem, 9vw, 2.4rem);
-  }
-
-  .gallery-hero-content {
-    padding-inline: 12px;
-  }
-
-  .photo-section {
-    padding-block: var(--space-lg) var(--space-md);
-  }
-
-  .facilities-wrap {
-    padding: var(--space-md) 12px;
-  }
-
-  .facilities-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .facility-item {
-    padding: 8px 12px;
-  }
-
-  .villa-desc-title {
-    font-size: clamp(1.5rem, 7vw, 2rem);
-  }
-
-  .villa-desc-section .container,
-  .photo-section .container {
-    width: calc(100% - 24px);
-  }
-
-  .cta-strip {
-    padding-inline: 12px;
-  }
-
-  .cta-strip p {
-    font-size: 0.88rem;
-  }
-
-  .lightbox-inner img {
-    max-height: 60vh;
-  }
-
-  .lightbox-close {
-    top: -36px;
-    font-size: 1.2rem;
-  }
+  .navbar-gallery { padding-inline: var(--space-md); }
+  .photo-grid { columns: 1; }
+  .lightbox-nav { display: none; }
+  .lightbox-inner img { max-height: 70vh; }
+  .lightbox-prev, .lightbox-next { display: none; }
+  .lightbox-overlay { padding: var(--space-md); }
 }

@@ -4,22 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Villa Putih · Villa Syariah Pikasa</title>
-
-  <!-- Fonts -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
 
-  <!-- ══════════════ NAVBAR ══════════════ -->
+  <!-- NAVBAR -->
   <nav class="navbar-gallery" id="navbar">
     <a href="index.html" class="nav-logo">
       <img src="assets/logo.png" alt="Villa Syariah Pikasa">
@@ -29,7 +23,7 @@
     </a>
   </nav>
 
-  <!-- ══════════════ HERO ══════════════ -->
+  <!-- HERO -->
   <section class="gallery-hero background-villa-putih" id="home">
     <div class="gallery-hero-overlay"></div>
     <div class="gallery-hero-content">
@@ -37,26 +31,26 @@
       <div class="gallery-hero-badge">2 Lantai</div>
       <h1 class="gallery-hero-title">Villa Putih</h1>
     </div>
-    <a href="#photos" class="gallery-hero-scroll" aria-label="Scroll ke galeri foto">
+    <a href="#photos" class="gallery-hero-scroll">
       <i class="fa fa-chevron-down"></i>
     </a>
   </section>
 
-  <!-- ══════════════ PHOTO GRID ══════════════ -->
+  <!-- PHOTO GRID -->
   <section class="photo-section" id="photos">
     <div class="container">
       <div class="section-label reveal">Galeri Foto</div>
       <h2 class="section-title reveal">Jelajahi Setiap<br>Sudut Villa Putih</h2>
       <div class="photo-grid reveal" id="photoGrid">
-        <div class="photo-grid-item" data-index="0"><img src="assets/1.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="1"><img src="assets/2.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="2"><img src="assets/3.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="3"><img src="assets/4.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="4"><img src="assets/5.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="5"><img src="assets/6.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="6"><img src="assets/7.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="7"><img src="assets/8.jpg"  alt="Villa Putih"></div>
-        <div class="photo-grid-item" data-index="8"><img src="assets/9.jpg"  alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="0"><img src="assets/1.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="1"><img src="assets/2.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="2"><img src="assets/3.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="3"><img src="assets/4.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="4"><img src="assets/5.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="5"><img src="assets/6.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="6"><img src="assets/7.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="7"><img src="assets/8.jpg" alt="Villa Putih"></div>
+        <div class="photo-grid-item" data-index="8"><img src="assets/9.jpg" alt="Villa Putih"></div>
         <div class="photo-grid-item" data-index="9"><img src="assets/10.jpg" alt="Villa Putih"></div>
         <div class="photo-grid-item" data-index="10"><img src="assets/21.jpg" alt="Villa Putih"></div>
         <div class="photo-grid-item" data-index="11"><img src="assets/22.jpg" alt="Villa Putih"></div>
@@ -64,23 +58,21 @@
     </div>
   </section>
 
-  <!-- ══════════════ LIGHTBOX ══════════════ -->
-  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Lightbox galeri foto">
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox">
     <div class="lightbox-inner">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Tutup"><i class="fa fa-times"></i></button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Foto sebelumnya"><i class="fa fa-chevron-left"></i></button>
-      <img src="" alt="Foto Villa Putih" id="lightboxImg">
-      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Foto berikutnya"><i class="fa fa-chevron-right"></i></button>
+      <button class="lightbox-close" id="lightboxClose"><i class="fa fa-times"></i></button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa fa-chevron-left"></i></button>
+      <img src="" alt="" id="lightboxImg">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa fa-chevron-right"></i></button>
       <div class="lightbox-counter" id="lightboxCounter"></div>
     </div>
   </div>
 
-  <!-- ══════════════ DESCRIPTION + FACILITIES ══════════════ -->
+  <!-- DESCRIPTION + FACILITIES -->
   <section class="villa-desc-section">
     <div class="container">
       <div class="villa-desc-grid">
-
-        <!-- Description -->
         <div class="reveal">
           <div class="villa-desc-label">Tentang Villa</div>
           <span class="villa-desc-floor">2 Lantai</span>
@@ -92,102 +84,77 @@
             Cocok untuk keluarga besar yang menginginkan liburan dengan suasana elegan dan berkesan.
           </p>
         </div>
-
-        <!-- Facilities -->
         <div class="facilities-wrap reveal">
           <h3 class="facilities-title">Akomodasi &amp; Fasilitas</h3>
           <div class="facilities-grid">
-            <div class="facility-item"><img src="icons/bedroom.png"      alt=""><span>3 Kamar Tidur</span></div>
-            <div class="facility-item"><img src="icons/bathroom.png"     alt=""><span>3 Kamar Mandi</span></div>
-            <div class="facility-item"><img src="icons/tv.png"           alt=""><span>TV</span></div>
-            <div class="facility-item"><img src="icons/fridge.png"       alt=""><span>Kulkas</span></div>
-            <div class="facility-item"><img src="icons/water-heater.png" alt=""><span>Pemanas Air</span></div>
-            <div class="facility-item"><img src="icons/dispenser.png"    alt=""><span>Dispenser</span></div>
-            <div class="facility-item"><img src="icons/kitchen.png"      alt=""><span>Dapur Lengkap</span></div>
-            <div class="facility-item"><img src="icons/dining-table.png" alt=""><span>Meja Makan</span></div>
-            <div class="facility-item"><img src="icons/wifi.png"         alt=""><span>WiFi Gratis</span></div>
-            <div class="facility-item"><img src="icons/balcony.png"      alt=""><span>Rooftop / Balkon</span></div>
-            <div class="facility-item"><img src="icons/parking.png"      alt=""><span>Parkiran Luas</span></div>
-            <div class="facility-item"><img src="icons/mountain.png"     alt=""><span>View Gunung Lawu</span></div>
+            <div class="facility-item"><img src="icons/bedroom.png" alt="Kamar Tidur"><span>3 Kamar Tidur</span></div>
+            <div class="facility-item"><img src="icons/bathroom.png" alt="Kamar Mandi"><span>3 Kamar Mandi</span></div>
+            <div class="facility-item"><img src="icons/tv.png" alt="TV"><span>TV</span></div>
+            <div class="facility-item"><img src="icons/fridge.png" alt="Kulkas"><span>Kulkas</span></div>
+            <div class="facility-item"><img src="icons/water-heater.png" alt="Pemanas Air"><span>Pemanas Air</span></div>
+            <div class="facility-item"><img src="icons/dispenser.png" alt="Dispenser"><span>Dispenser</span></div>
+            <div class="facility-item"><img src="icons/kitchen.png" alt="Dapur"><span>Dapur Lengkap</span></div>
+            <div class="facility-item"><img src="icons/dining-table.png" alt="Meja Makan"><span>Meja Makan</span></div>
+            <div class="facility-item"><img src="icons/wifi.png" alt="WiFi"><span>WiFi Gratis</span></div>
+            <div class="facility-item"><img src="icons/balcony.png" alt="Rooftop"><span>Rooftop / Balkon</span></div>
+            <div class="facility-item"><img src="icons/parking.png" alt="Parkiran"><span>Parkiran Luas</span></div>
+            <div class="facility-item"><img src="icons/mountain.png" alt="View Gunung"><span>View Gunung Lawu</span></div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ══════════════ CTA ══════════════ -->
+  <!-- CTA -->
   <section class="cta-strip">
     <div class="container">
       <h2>Siap Memesan Villa Putih?</h2>
       <p>Hubungi kami sekarang dan dapatkan pengalaman menginap terbaik bersama keluarga.</p>
-      <a href="https://wa.me/6285743099997" class="btn btn-white" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp" style="margin-right: 6px"></i> Hubungi via WhatsApp
+      <a href="https://wa.me/6285743099997" class="btn btn-white" target="_blank">
+        <i class="fab fa-whatsapp" style="margin-right:6px"></i> Hubungi via WhatsApp
       </a>
     </div>
   </section>
 
-  <!-- ══════════════ FOOTER ══════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-social">
-      <a href="https://www.facebook.com/share/XuetdsV49T7Bx52q/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <img src="icons/facebook.png" alt="Facebook">
-      </a>
-      <a href="https://www.tiktok.com/@villa.pikasa?_t=8ozs2mw2bA0&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-        <img src="icons/tik-tok.png" alt="TikTok">
-      </a>
-      <a href="https://www.instagram.com/villapikasaa?igsh=eWI1OGI0N3FvbjY1" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <img src="icons/instagram.png" alt="Instagram">
-      </a>
+      <a href="https://www.facebook.com/share/XuetdsV49T7Bx52q/?mibextid=qi2Omg" target="_blank" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
+      <a href="https://www.tiktok.com/@villa.pikasa?_t=8ozs2mw2bA0&_r=1" target="_blank" aria-label="TikTok"><img src="icons/tik-tok.png" alt="TikTok"></a>
+      <a href="https://www.instagram.com/villapikasaa?igsh=eWI1OGI0N3FvbjY1" target="_blank" aria-label="Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
     </div>
     <p>&copy; 2024 Villa Syariah Pikasa. All rights reserved.</p>
   </footer>
 
   <script>
-    /* ── Navbar scroll ── */
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
-    /* ── Smooth scroll ── */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (!target) return;
-        e.preventDefault();
         window.scrollTo({ top: target.offsetTop - navbar.offsetHeight, behavior: 'smooth' });
       });
     });
 
-    /* ── Scroll reveal ── */
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
+      entries.forEach(el => { if (el.isIntersecting) { el.target.classList.add('revealed'); observer.unobserve(el.target); } });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    /* ── Lightbox ── */
-    const images   = Array.from(document.querySelectorAll('.photo-grid-item img')).map(img => img.src);
-    let current    = 0;
-
-    const lightbox        = document.getElementById('lightbox');
-    const lightboxImg     = document.getElementById('lightboxImg');
+    /* Lightbox */
+    const images = Array.from(document.querySelectorAll('.photo-grid-item img')).map(img => img.src);
+    let current = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
     const lightboxCounter = document.getElementById('lightboxCounter');
 
-    function updateLightbox() {
-      lightboxImg.src             = images[current];
-      lightboxCounter.textContent = (current + 1) + ' / ' + images.length;
-    }
-
-    function openLightbox(index) {
-      current = index;
-      updateLightbox();
+    function openLightbox(i) {
+      current = i;
+      lightboxImg.src = images[i];
+      lightboxCounter.textContent = (i + 1) + ' / ' + images.length;
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -199,28 +166,21 @@
 
     function moveLightbox(dir) {
       current = (current + dir + images.length) % images.length;
-      updateLightbox();
+      lightboxImg.src = images[current];
+      lightboxCounter.textContent = (current + 1) + ' / ' + images.length;
     }
 
-    document.querySelectorAll('.photo-grid-item').forEach((item, i) => {
-      item.addEventListener('click', () => openLightbox(i));
-    });
-
+    document.querySelectorAll('.photo-grid-item').forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
     document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
     document.getElementById('lightboxPrev').addEventListener('click', () => moveLightbox(-1));
     document.getElementById('lightboxNext').addEventListener('click', () => moveLightbox(1));
-
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    document.addEventListener('keydown', e => {
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
       if (!lightbox.classList.contains('active')) return;
-      if (e.key === 'Escape')     closeLightbox();
-      if (e.key === 'ArrowLeft')  moveLightbox(-1);
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') moveLightbox(-1);
       if (e.key === 'ArrowRight') moveLightbox(1);
     });
   </script>
-
 </body>
 </html>
